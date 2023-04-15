@@ -1,0 +1,134 @@
+@font-face {
+  font-family: YekanBakhBold;
+  src: url(../../fonts/YekanBakhBold.woff);
+}
+@font-face {
+  font-family: YekanBakhMedium;
+  src: url(../../fonts/YekanBakhMedium.woff);
+}
+@font-face {
+  font-family: YekanBakhHeavy;
+  src: url(../../fonts/YekanBakhHeavy.woff);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: YekanBakhHeavy;
+}
+
+.header-top {
+  width: 100vw;
+  padding: 20px 15px 0 15px;
+  font-size: 10px;
+}
+.header-top svg {
+  width: 18px;
+  color: red;
+}
+.header-top div {
+  display: flex;
+  margin-bottom: 5px;
+}
+.header-top a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 100;
+  color: blue;
+}
+
+.header-top h3:last-child {
+  color: red;
+}
+
+select {
+  margin-right: 10px;
+  width: 40px;
+  height: 20px;
+}
+
+header {
+  width: calc(100vw - 1rem);
+  background-color: #f0f4f7;
+  margin: auto;
+  padding: 1rem 0.4rem 0 0.4rem;
+  border: solid 1px #ccc;
+  position: relative;
+}
+header img {
+  width: 200px;
+}
+header .header {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-ozv a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 100;
+  color: red;
+}
+header .header-ozv > a {
+  width: 130px;
+  height: 30px;
+  padding: 5px 20px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+}
+header .header-ozv > a:hover {
+  background-color: #eeeeff;
+  transition: all 0.3s;
+}
+header .header-ozv p {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+header .header-ozv p a {
+  font-size: 12px;
+}
+header .header-ozv p a:hover {
+  color: #6f6f6f;
+  transition: all 0.2s;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+header nav ul a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 100;
+  display: block;
+  width: auto;
+  padding: 4px 8px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  color: #666;
+}
+header nav ul a:hover {
+  background-color: #eeeeff;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  header img {
+    width: 155px;
+  }
+  nav {
+    position: absolute;
+    top: 0.9rem;
+    right: 25%;
+    width: 20rem;
+  }
+  nav li {
+    margin-bottom: 1px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

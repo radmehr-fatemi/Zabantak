@@ -1,0 +1,13 @@
+@mixin text ($textD,$size,$weight) {
+    text-decoration: $textD;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin query($query) {
+    @if ($query == l) {
+        @media (min-width:768px){
+            @content
+        }
+    }
+}

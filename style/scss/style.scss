@@ -1,0 +1,134 @@
+@import "font";
+@import "mixin";
+@import "variables";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: YekanBakhHeavy;
+}
+
+.header-top{
+    width: 100vw;
+    padding:20px 15px 0 15px;
+    font-size: 10px;
+    svg{
+        width: 18px;
+        color: red;
+    }
+    div{
+        display: flex;
+        margin-bottom: 5px;
+    }
+    a{
+        @include text(none,14px,100);
+        color:blue;
+    }
+    
+}
+.header-top h3:last-child{
+    color: red;
+}
+
+select{
+    margin-right: 10px;
+    width: 40px;
+    height: 20px;
+}
+
+header{
+    width: calc(100vw - 1rem);
+    background-color: #f0f4f7;
+    margin: auto;
+    padding: 1rem .4rem 0 .4rem;
+    border: $borderFirst;
+    position: relative;
+
+    img{
+        width: 200px;
+    }
+    .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-ozv{
+    a{
+        @include text(none,14px,100);
+        color: red;
+    }
+    
+    >a{
+        width: 130px;
+        height: 30px;
+        padding: 5px 20px;
+        background-color: #fff;
+        border: solid 1px #ccc;
+
+        &:hover{
+            background-color: #eeff;
+            transition: all .3s;
+        }
+    }
+    p{
+        font-size: 12px;
+        padding: 5px 10px;
+        a{
+        font-size: 12px;
+        &:hover{
+            color: #6f6f6f;
+            transition: all .2s;
+        }
+        }
+        }
+}   
+nav{
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        a{
+            @include text(none,12px,100);
+            display: block;
+            width: auto;
+            padding: $paddingFirst;
+            border: $borderFirst;
+            background-color: #fff;
+            color: #666;
+            
+            &:hover{
+            background-color: #eeff;
+            color: #000;
+            transition: all .2s ease;
+            
+            }
+        }
+    }
+}
+
+}
+
+@include query(l){
+    .header-top{
+        display: flex;
+        justify-content: space-between;
+    }
+    header{
+        img{
+            width: 155px;
+        }
+    }
+    nav{
+        position: absolute;
+        top: .9rem;
+        right: 25%;
+        // bottom: 0;
+        width: 20rem;
+
+        li{
+            margin-bottom: 1px;
+        }
+    }
+
+ 
+}
