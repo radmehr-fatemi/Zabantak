@@ -39,7 +39,7 @@ select{
 }
 
 header{
-    width: 1200px;
+    width: calc(100vw - 2rem);
     margin: auto;
     background-color: #f0f4f7;
     padding: 1rem .4rem 0 .4rem;
@@ -108,7 +108,7 @@ nav{
 
 }
 .header-buttom{
-    width: 1200px;
+    width: calc(100VW - 2REM);
     margin: auto;
 
     div:first-child{
@@ -123,7 +123,8 @@ nav{
             height: 2.2rem;
             border: solid 1px #666;
             margin: 1rem 0;
-
+            border-radius: 11px;
+            border: none;
         }
         p{
             font-size: 12px;
@@ -137,6 +138,8 @@ nav{
             color: #666;
             margin: 1rem 0;
             margin-bottom: 0;
+            border-radius: 11px;
+            border: none;
         }
         a{
             @include text(none,10px,100);
@@ -147,6 +150,7 @@ nav{
             width: 60px;
             height: 35px;
             text-align: center;
+            border-radius: 11px;
 
             &:hover{
                 background-color: #391d038b;
@@ -185,10 +189,16 @@ nav{
     }
 }
 
-aside{
-    width: 1200px;
+.main{
+    width: calc(100vw - 2rem);
+    margin: auto ;
     border: $borderFirst;
-    padding: 1em 2rem;
+    padding: 1em 1rem;
+
+}
+
+aside{
+    width: 100%;
     margin: auto;
 }
 
@@ -328,17 +338,208 @@ aside{
     }
 }
 
-  
+main{
+    margin: auto;
+    
+    div:first-child{
+        display: flex;
+        display: flex;
+        align-items: center;
+    
+        a{
+            @include text(none,12px,100);
+            color: #666a;
+            &:hover{
+                color: #000;
+            }
+        }
+        svg{
+            width: 18px;
+            color: #e46f00;
+            margin: 0 10px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+
+    .main-two{
+        width: 100%;
+        padding: 1rem 2rem;
+        background-color: #dfe4e8;
+        border: solid 1px #dadce1 ;
+
+        p{
+            font-size: 16px;
+            color: red;
+        }
+    }
+
+    .main-three{
+        width: 100%;
+        padding: .5rem 10px;
+        background-color: #fff5c7;
+        display: flex;
+
+        p{
+            font-size: 12px;
+        }
+        a{
+            @include text(none,12px,100);
+            color: blue;
+        }
+        span{
+            margin: 0 4px;
+        }
+        p:first-child{
+            margin-left: 10px;
+        }
+    }
+ 
+
+.cards{
+    width: 100%;
+    border: $borderFirst ;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    font-size: 12px;
+    padding: 10px;
+    gap: 1rem;
+
+    a{
+        @include text (none,12px,100);
+        color: #6f6f6f;
+
+        &:hover{
+            color: #000;
+            transition: all .02s; 
+        }
+    }
+    a:last-child{
+        color: #e46f00;
+    }
+
+    img{
+        width: 100%;
+    }
+}
+.next-page {
+    display: flex;
+    background-color: #f0f4f7;
+    padding: 10px 1rem;
+    border: $borderFirst;
+
+    a{
+        @include text(none,18px,100);
+        color: #fff;
+        padding: 5px;
+        background-color: #e46f00;
+        margin-right: 5px;
+        border: 1px solid #be5d02;
+        border-radius: 5px;
+    }
+}
+} 
+
+footer{
+    width: calc(100% - 2rem);
+    margin: auto;
+
+    .footer-top{
+        width: 100%;
+        background-color: #e46f00;
+        padding: 1rem;
+        
+        input{
+            width: 100%;
+            height: 40px;
+            border-radius: 11px;
+            border: none;
+        }
+
+        button{
+            padding: 6px;
+            border-radius: 10px;
+            border: solid 1px #a05004;
+            background-color: #c25f03;
+            color: #fff;
+            margin-top: .5rem;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #a05004;
+            }
+        }
+    }
+
+    .footer{
+        padding: 1rem;
+
+        div{
+            margin-top: 1.5rem;
+        }
+        ul{
+            list-style-type: none;
+        }
+        h1{
+            font-size: 20px;
+        }
+        a{
+            @include text (none,14px,100);
+            color: #333;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        svg{
+            width: 14px;
+            color: #e46f00;
+        }
+        div:last-child{
+            p{
+                a{
+                    color: blue;
+                    width: 100px;
+                }
+            }
+        }
+        .number{
+            font-size: 22px;
+            width: 144px;
+           background-color: rgb(158, 228, 219);
+           border-radius: 22px;
+
+        }
+        .insta{
+            h3{
+                background: rgb(73, 89, 208);
+                color: #fff;
+                padding: 2px;
+                margin-left: 2px;
+            }
+         img{
+            width: 40px;
+        }
+    }
+    }
+}
 
 
 
 @include query(l){
     .header-top{
+        width: calc(100vw - 2rem);
+        margin: auto 1rem;
         display: flex;
         justify-content: space-between;
     }
     header{
+        width: calc(100vw - 2rem);
+        margin: auto 1rem;
+        
         img{
+            
             width: 155px;
         }
     }
@@ -353,6 +554,9 @@ aside{
         }
     }
 .header-buttom{
+    width: calc(100vw - 2rem);
+    margin: auto 1rem;
+
     div:first-child{
         flex-direction: row;
         align-items: center;
@@ -375,23 +579,62 @@ aside{
         }
     }
 }
+
+.main{
+    width: calc(100vw - 2rem);
+    display: flex;
+
+    aside{
+        width: 25%;
+        margin-top: 0;
+    }
+
+    main{
+        width: 75%;
+        margin-right: .5rem;
+    }
+
+    .cards{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+footer{
+    .footer-top{
+        input{
+            width: 400px;
+        }
+        button{
+            margin: 0 1rem;
+        }
+    }
+
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+      
+    }
+}
  
 }
 
+
+
+
+
+
 @include query(xl) {
     .header-top{
-        width: calc(100vw - 2rem);
-        margin: auto 1rem;
+       
     }
     header{
-        width: calc(100vw - 2rem);
-        margin: auto 1rem;
+        
     }
     .header-buttom{
-        width: calc(100vw - 2rem);
-        margin: auto 1rem;
+        
     }
-    aside{
-        width:calc(100vw - 2rem) ;
-    }
+   
+
+
 }
