@@ -6,10 +6,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: YekanBakhHeavy;
+    transition: all .2s;
 }
 
 .header-top{
-    width: 100vw;
+    width: 1200px;
+    margin: auto;
     padding:20px 15px 0 15px;
     font-size: 10px;
     svg{
@@ -37,9 +39,9 @@ select{
 }
 
 header{
-    width: calc(100vw - 1rem);
-    background-color: #f0f4f7;
+    width: 1200px;
     margin: auto;
+    background-color: #f0f4f7;
     padding: 1rem .4rem 0 .4rem;
     border: $borderFirst;
     position: relative;
@@ -67,7 +69,6 @@ header{
 
         &:hover{
             background-color: #eeff;
-            transition: all .3s;
         }
     }
     p{
@@ -99,7 +100,6 @@ nav{
             &:hover{
             background-color: #eeff;
             color: #000;
-            transition: all .2s ease;
             
             }
         }
@@ -107,6 +107,230 @@ nav{
 }
 
 }
+.header-buttom{
+    width: 1200px;
+    margin: auto;
+
+    div:first-child{
+        width: 100%;
+        background-color: #e46f00;
+        padding: .5rem 2rem;  
+        display: flex;
+        flex-direction: column;
+
+        input{
+            width: 100%;
+            height: 2.2rem;
+            border: solid 1px #666;
+            margin: 1rem 0;
+
+        }
+        p{
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+        }
+        select{
+            width: 100%;
+            height: 2.2rem;
+            border: solid 1px #666;
+            color: #666;
+            margin: 1rem 0;
+            margin-bottom: 0;
+        }
+        a{
+            @include text(none,10px,100);
+            color: #fff;
+            padding: 10px;
+            background: #6d38058b;
+            border: solid 1px #666;
+            width: 60px;
+            height: 35px;
+            text-align: center;
+
+            &:hover{
+                background-color: #391d038b;
+            }
+        }
+    }
+
+    div:last-child{
+        width: 100%;
+        background-color: #f0f4f7;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 1rem 0 1rem;
+        border: $borderFirst;
+
+        a{
+            @include text(none,11px,100);
+            color: #555;
+            width: auto;
+            margin-left: 33px;
+        }
+        a:first-child{
+            display: flex;
+            align-items: center;
+            border-left: solid 1px #ddd;
+            width: 120px;
+        }
+         #two{
+            border-left: solid 1px #ddd;
+            width: 150px;
+        }
+
+        svg{
+            width: 22px;
+        }
+    }
+}
+
+aside{
+    width: 1200px;
+    border: $borderFirst;
+    padding: 1em 2rem;
+    margin: auto;
+}
+
+.aside-one{
+    width: 100%;
+
+    div:first-child{
+        width: 100%;
+        height: 2.2rem;
+        background-color: #e46f00;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        font-size: 13px;
+        color: #fff;
+        border: solid 1px #666;
+        
+    }
+
+    .aside-one-{
+        width: 100%;
+        height: 1.9rem;
+        background-color: #f0f4f7;
+        border: solid 1px #dfe4e8;
+        padding-right: 10px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    div:last-child{
+        width: 100%;
+        padding:10px;
+        border: solid 1px #dfe4e8;
+
+        h2{
+            font-size: 14px;
+        }
+        a{
+            @include text(none,12px,100);
+            color: #e46f00;
+            margin-left: 3px;
+
+            &:hover{
+            color: #333;
+            }
+        }
+        p{
+            font-size: 12px;
+            color: #666;
+        }
+
+      
+    }
+}
+
+.aside-two{
+    width: 100%;
+
+    div{
+        width: 100%;
+        height: 2.2rem;
+        background-color: #e46f00;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        font-size: 13px;
+        color: #fff;
+        border: solid 1px #666;
+    }
+
+    .aside-two-one li{
+     list-style-type: none;
+     width: 100%;
+     height: 2.2rem;
+     background-color: #f0f4f7;
+     border: solid 1px #dfe4e8;
+     padding-right: 10px;
+     display: flex;
+     align-items: center;
+
+     a{
+        @include text(none,14px,100);
+        color: #555;
+     }
+
+     &:hover{
+        background-color: #fbfbff;
+     }
+    }
+
+    .aside-two-two li{
+        list-style-type: none;
+        width: 100%;
+        height: 1.8rem;
+        border: solid 1px #dfe4e8;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+   
+        a{
+           @include text(none,12px,100);
+           color: #555;
+        }
+   
+        &:hover{
+           background-color: #f0f4f7;
+        }
+    }
+
+    ul:last-child li{
+        list-style-type: none;
+        width: 100%;
+        height: 2.2rem;
+        background-color: #f0f4f7;
+        border: solid 1px #dfe4e8;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+   
+        a{
+           @include text(none,14px,100);
+           color: #555;
+        }
+   
+        &:hover{
+           background-color: #fbfbff;
+        } 
+    }
+}
+
+.aside-third{
+    width: 100%;
+
+    img{
+        width: 100%;
+    }
+}
+
+  
+
+
 
 @include query(l){
     .header-top{
@@ -122,13 +346,52 @@ nav{
         position: absolute;
         top: .9rem;
         right: 25%;
-        // bottom: 0;
         width: 20rem;
 
         li{
             margin-bottom: 1px;
         }
     }
+.header-buttom{
+    div:first-child{
+        flex-direction: row;
+        align-items: center;
+        padding-left: 5rem;
 
+        input{
+            width: 300px;
+        }
+        select{
+            width: 300px;
+            margin: auto;
+        }
+        p{
+            margin: 0 10px;
+        }
+        a{
+            margin: auto;
+            margin-left: 4rem;
+
+        }
+    }
+}
  
+}
+
+@include query(xl) {
+    .header-top{
+        width: calc(100vw - 2rem);
+        margin: auto 1rem;
+    }
+    header{
+        width: calc(100vw - 2rem);
+        margin: auto 1rem;
+    }
+    .header-buttom{
+        width: calc(100vw - 2rem);
+        margin: auto 1rem;
+    }
+    aside{
+        width:calc(100vw - 2rem) ;
+    }
 }
